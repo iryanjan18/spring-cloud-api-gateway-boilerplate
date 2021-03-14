@@ -1,0 +1,36 @@
+server:
+  error:
+    include-message: always
+    include-binding-errors: always
+  port: 8082
+
+spring:
+  application:
+    name: api-gateway
+  cloud:
+    gateway:
+      discovery:
+        locator:
+          enabled: true
+          lower-case-service-id: true
+      httpclient:
+        ssl:
+          use-insecure-trust-manager: true
+
+# If you are running a Spring Cloud Config Server and configured to use RabbitMQ,
+# uncomment this section and update the values
+# https://github.com/iryanjan18/eureka-discovery-service-boilerplate
+#  rabbitmq:
+#    host: localhost
+#    port: 5672
+#    username: test
+#    password: test
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8081/eureka # https://github.com/iryanjan18/eureka-discovery-service-boilerplate
+
+jwt:
+  issuer: ryanjan
+  token: iewr*&^*(yoiHLKNklhjp;oj43ii&IO

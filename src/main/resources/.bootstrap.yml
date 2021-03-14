@@ -1,0 +1,6 @@
+# Rename this file to `.bootstrap.yml` if you are going to use Spring Cloud Config Server
+spring:
+  cloud:
+    config:
+      uri: http://localhost:8001
+      name: api-gateway
